@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>Counter Input</mat-label>
+            <input matInput [(ngModel)]="customCounterData">
+        </mat-form-field>
+          <br>
+        <mat-form-field>
+            <mat-label>Action Type</mat-label>
+            <mat-select [(ngModel)]="customAction">
+                <mat-option value="add">Add</mat-option>
+                <mat-option value="reduce">Reduce</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <br>
+        <button mat-raised-button color="primary" (click)="onCustomIncrement()">Proceed</button>
+    </mat-card-content>
+</mat-card>
