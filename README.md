@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+If we want to show counter and channel in different components, instead of subscribing store in both components(time consuming/redundant code) we create selector and call store values in different components.
+increment/decrement/reset should affect the counter property only and rename should affect only channelname property hence selectors are created
+
+ng add @ngrx/store-devtools

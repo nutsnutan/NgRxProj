@@ -8,6 +8,7 @@ import {
   decrement,
   increment,
   reset,
+  rename,
 } from './counter.actions';
 
 // REDUCERS <--- INITAL STATE + ACTIONS (CALCULATE = FINAL STATE)
@@ -41,6 +42,12 @@ const _counterReducer = createReducer(
         action.action == 'add'
           ? state.counters + action.value
           : state.counters - action.value,
+    };
+  }),
+  on(rename, (state, action) => {
+    return {
+      ...state,
+      channelName: action.channel,
     };
   }),
 );
